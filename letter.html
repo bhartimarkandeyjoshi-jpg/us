@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Heart For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#fff7fb);
+    overflow:hidden;
+}
+
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(255,105,180,.25);
+
+    z-index:2;
+
+}
+
+
+h1{
+
+    color:#ff4d88;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+#letter{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:2;
+
+    min-height:260px;
+
+}
+
+
+
+.cursor{
+
+    display:inline-block;
+
+    width:3px;
+
+    height:22px;
+
+    background:#ff4d88;
+
+    animation:blink .7s infinite;
+
+}
+
+
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+button{
+
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff4d88;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2f73;
+
+}
+
+
+
+/* Floating hearts */
+
+
+.hearts{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    color:#ff5c8a;
+
+    font-size:25px;
+
+    animation:float 8s linear infinite;
+
+}
+
+
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+
+.hearts span:nth-child(3){left:40%;animation-delay:4s;}
+
+.hearts span:nth-child(4){left:60%;animation-delay:1s;}
+
+.hearts span:nth-child(5){left:75%;animation-delay:3s;}
+
+.hearts span:nth-child(6){left:90%;animation-delay:5s;}
+
+
+
+@keyframes float{
+
+0%{
+
+    transform:translateY(0);
+
+    opacity:0;
+
+}
+
+
+20%{
+
+    opacity:1;
+
+}
+
+
+100%{
+
+    transform:translateY(-110vh);
+
+    opacity:0;
+
+}
+
+}
+
+
+/* final glow */
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+
+}
+
+
+
+@keyframes glow{
+
+from{
+
+    text-shadow:0 0 5px #ff4d88;
+
+}
+
+
+to{
+
+    text-shadow:0 0 25px #ff4d88;
+
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
+
+
+<div class="container">
+
+    <h1 class="glow">
+        My Heart For You ❤️
+    </h1>
+
+
+    <div id="letter"></div>
+
+
+    <button id="finishBtn" onclick="showLove()">
+        One Last Surprise ❤️
+    </button>
+
+
+</div>
+
+
+
+<script>
+
+
+let text = `
+
+My Love ❤️
+
+I didn't make this because today is a special day...
+
+I made this because loving you is my favorite thing.
+
+Thank you for every laugh, every conversation,
+every little moment, and every memory we have created together.
+
+You make my ordinary days feel special.
+
+Since 20 November 2024,
+my world has become a little brighter because you are in it.
+
+I hope you always remember one thing...
+
+You are loved.
+You are appreciated.
+And you are my favorite person. ❤️
+
+If I had to choose again,
+I would still choose you.
+
+Every single time.
+
+Forever yours ❤️
+
+`;
+
+
+let index = 0;
+
+let letter = document.getElementById("letter");
+
+
+
+function typing(){
+
+    if(index < text.length){
+
+        letter.innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing,40);
+
+    }
+
+    else{
+
+        document.getElementById("finishBtn").style.display="inline-block";
+
+    }
+
+}
+
+
+typing();
+
+
+
+function showLove(){
+
+    document.querySelector(".container").innerHTML = `
+
+    <h1 class="glow">
+        ❤️ I Love You ❤️
+    </h1>
+
+    <p style="font-size:22px;color:#555;line-height:2;">
+
+    This little website was made with love,
+    just for you.
+
+    <br><br>
+
+    No code can calculate how much you mean to me.
+
+    <br><br>
+
+    You are my favorite person,
+    my favorite memory,
+    and my favorite future.
+
+    <br><br>
+
+    Forever & Always ❤️
+
+    </p>
+
+    `;
+
+
+    createHearts();
+
+}
+
+
+
+function createHearts(){
+
+    for(let i=0;i<50;i++){
+
+        let heart=document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.style.position="absolute";
+
+        heart.style.left=Math.random()*100+"%";
+
+        heart.style.top=Math.random()*100+"%";
+
+        heart.style.fontSize=(15+Math.random()*30)+"px";
+
+        heart.style.animation="float 4s linear";
+
+        document.body.appendChild(heart);
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+</html>

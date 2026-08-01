@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Your Adventure ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffe0eb,#fff8fb);
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:650px;
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(255,105,180,.25);
+    z-index:2;
+}
+
+h1{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#666;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.choice{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2f73;
+    box-shadow:0 10px 25px rgba(255,77,136,.35);
+}
+
+#answer{
+    display:none;
+    margin-top:30px;
+    font-size:20px;
+    color:#444;
+    line-height:1.7;
+}
+
+.next{
+    display:none;
+    margin-top:25px;
+}
+
+.next a{
+    text-decoration:none;
+    color:white;
+}
+
+
+/* Floating hearts */
+
+.hearts{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-60px;
+    color:#ff5c8a;
+    font-size:25px;
+    animation:float 8s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:40%;animation-delay:4s;}
+.hearts span:nth-child(4){left:60%;animation-delay:1s;}
+.hearts span:nth-child(5){left:75%;animation-delay:3s;}
+.hearts span:nth-child(6){left:90%;animation-delay:5s;}
+
+@keyframes float{
+
+0%{
+    transform:translateY(0);
+    opacity:0;
+}
+
+20%{
+    opacity:1;
+}
+
+100%{
+    transform:translateY(-110vh);
+    opacity:0;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
+
+
+<div class="container">
+
+    <h1>❤️ Choose Your Adventure ❤️</h1>
+
+    <p class="subtitle">
+        If we were together right now...
+        <br>
+        what would you choose first? 🥰
+    </p>
+
+
+    <div class="choice">
+
+        <button onclick="choose()">
+            🤗 Give me a hug
+        </button>
+
+        <button onclick="choose()">
+            💋 Give me a kiss
+        </button>
+
+        <button onclick="choose()">
+            🫂 Cuddle with me
+        </button>
+
+    </div>
+
+
+    <div id="answer">
+
+        ❤️ Correct Choice ❤️
+
+        <br><br>
+
+        Actually...
+        <br>
+
+        I want all of them. 😌
+
+        <br><br>
+
+        Because every moment with you
+        becomes my favorite moment.
+
+    </div>
+
+
+    <button class="next" id="nextBtn" onclick="nextPage()">
+        Continue ❤️
+    </button>
+
+
+</div>
+
+
+<script>
+
+function choose(){
+
+    document.getElementById("answer").style.display="block";
+
+    document.getElementById("nextBtn").style.display="inline-block";
+
+}
+
+
+function nextPage(){
+
+    window.location.href="lucky.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
