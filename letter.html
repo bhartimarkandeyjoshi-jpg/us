@@ -1,375 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>To My Babyyy Shivam ❤️</title>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-<style>
-
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body {
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    padding:30px 15px;
-
-    overflow-x:hidden;
-    overflow-y:auto;
-
-    font-family:'Poppins',sans-serif;
-
-    background:
-    radial-gradient(circle at 15% 20%,#ffd1e2,transparent 35%),
-    radial-gradient(circle at 85% 80%,#ffe0eb,transparent 35%),
-    linear-gradient(135deg,#fff0f6,#fffafd);
-}
-
-.container {
-
-    width:100%;
-    max-width:750px;
-
-    background:
-    linear-gradient(
-        rgba(255,255,255,.96),
-        rgba(255,250,252,.96)
-    );
-
-    padding:50px 45px;
-
-    border-radius:30px;
-
-    box-shadow:
-    0 20px 70px rgba(255,77,136,.2);
-
-    position:relative;
-}
-
-.top-heart {
-
-    text-align:center;
-
-    font-size:35px;
-
-    margin-bottom:10px;
-
-    animation:beat 1.5s infinite;
-}
-
-@keyframes beat {
-
-    0%,100% {
-        transform:scale(1);
-    }
-
-    50% {
-        transform:scale(1.15);
-    }
-}
-
-h1 {
-
-    text-align:center;
-
-    font-family:'Great Vibes',cursive;
-
-    color:#d9366d;
-
-    font-size:58px;
-
-    line-height:1.2;
-
-    margin-bottom:5px;
-}
-
-.subtitle {
-
-    text-align:center;
-
-    color:#ff6b9a;
-
-    font-size:14px;
-
-    letter-spacing:2px;
-
-    margin-bottom:30px;
-}
-
-.line {
-
-    width:100px;
-
-    height:2px;
-
-    margin:0 auto 35px;
-
-    background:
-    linear-gradient(
-        to right,
-        transparent,
-        #ff7fa8,
-        transparent
-    );
-}
-
-#letter {
-
-    color:#5f5f5f;
-
-    font-size:17px;
-
-    line-height:2;
-
-    white-space:pre-line;
-
-    overflow-wrap:break-word;
-}
-
-.signature {
-
-    text-align:right;
-
-    font-family:'Great Vibes',cursive;
-
-    color:#d9366d;
-
-    font-size:38px;
-
-    margin-top:30px;
-}
-
-#finishBtn {
-
-    display:none;
-
-    width:100%;
-
-    margin-top:35px;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:
-    linear-gradient(135deg,#ff4d88,#ff709f);
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    box-shadow:0 10px 25px rgba(255,77,136,.25);
-}
-
-@media(max-width:600px) {
-
-    body {
-        padding:15px 10px;
-    }
-
-    .container {
-        margin:10px auto;
-        padding:35px 20px;
-        border-radius:25px;
-    }
-
-    h1 {
-        font-size:43px;
-    }
-
-    .subtitle {
-        font-size:11px;
-    }
-
-    #letter {
-        font-size:15px;
-        line-height:1.9;
-    }
-
-    .signature {
-        font-size:32px;
-    }
-
-    #finishBtn {
-        font-size:16px;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Letter To Shivam ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg,#ffdce9,#fff8fb,#ffeaf2);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25px 15px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            background: rgba(255,255,255,.96);
+            padding: 45px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(255,77,136,.22);
+            text-align: center;
+            margin: 15px auto;
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff4d88;
+            font-size: 34px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        #letter {
+            text-align: left;
+            color: #555;
+            font-size: 17px;
+            line-height: 2;
+            white-space: pre-line;
+            min-height: 200px;
+        }
+
+        .cursor {
+            display: inline-block;
+            color: #ff4d88;
+            animation: blink .8s infinite;
+            font-weight: 700;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #finishBtn {
+            display: none;
+            margin-top: 35px;
+            padding: 16px 30px;
+            border-radius: 50px;
+            background: linear-gradient(135deg,#ff4d88,#ff729f);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(255,77,136,.28);
+            transition: .3s;
+        }
+
+        #finishBtn:hover {
+            transform: scale(1.04);
+        }
+
+        .bottom-heart {
+            margin-top: 25px;
+            color: #ff4d88;
+            font-size: 24px;
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding: 12px 10px;
+            }
+
+            .container {
+                padding: 32px 20px;
+                margin: 10px auto;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            #letter {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            #finishBtn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="top-heart">
-        ❤️
+        <h1>
+            My Baby Shivam,
+            <br>
+            My Heart For You ❤️
+        </h1>
+
+        <div id="letter"></div>
+
+        <div class="bottom-heart">
+            ❤️ 🥹 ❤️
+        </div>
+
+        <a href="./lucky.html" id="finishBtn">
+            One Last Surprise ❤️
+        </a>
+
     </div>
 
-    <h1>
-        To My Babyyy Shivam
-    </h1>
+    <script>
 
-    <div class="subtitle">
-        THE BOY WHO HAS MY WHOLE HEART
-    </div>
+        const message = `
+My baby Shivam... ❤️
 
-    <div class="line"></div>
+I don't even know where to begin because there are so many things I want to tell you.
 
-    <div id="letter"></div>
+You came into my life and somehow made ordinary moments feel special.
 
-    <div
-        class="signature"
-        id="signature"
-        style="display:none;"
-    >
-        Always yours... ❤️
-    </div>
+A simple conversation with you can make my entire day better.
 
-    <button
-        id="finishBtn"
-        onclick="showLove()"
-    >
-        One Last Surprise ❤️
-    </button>
+Your presence feels like comfort.
+Your smile feels like sunshine.
+And your hugs... honestly, I could live inside them. 🥹❤️
 
-</div>
+I don't need a perfect love story.
 
-<script>
+I just want our story.
 
-const text = `My Babyyy Shivam,
+The silly conversations.
+The random laughs.
+The little arguments.
+The "I miss you" messages.
+The late-night talks.
+The quiet moments where we don't even need words.
 
-I don't even know where to begin...
+I want all of it.
 
-Because somehow, whenever I try to put my feelings for you into words, the words always feel too small. ❤️
+Because it's with you.
 
-You have become such a beautiful part of my life.
+Shivam, if I could give you one thing in this world, I would give you the ability to see yourself through my eyes.
 
-Not just someone I love...
+Then you'd understand just how incredibly special you are to me.
 
-but someone I look for in my good moments, my bad moments, my random thoughts, my silly conversations and even in the quiet moments when I don't say anything.
+You are not just someone I love.
 
-You have this little way of making ordinary days feel special.
+You are someone I choose.
 
-And honestly, Shivam...
+Again and again.
 
-I hope you know how deeply you are loved.
+Every single day.
 
-I love your presence.
-I love our conversations.
-I love the little moments that probably seem ordinary but somehow stay in my heart.
+And if life gave me the chance to start everything over...
 
-I love knowing that somewhere in this huge world, there is YOU.
+I'd still look for you.
 
-My person.
-My comfort.
-My favorite notification.
-My favorite thought.
-My favorite "what if we..." person. 🥹❤️
+I'd still choose you.
 
-I don't know what the future has planned for us.
+I'd still fall for you.
 
-But if I get a choice...
+And I'd still call you...
 
-I want more memories with you.
+My baby. ❤️
 
-More laughs until our stomachs hurt.
-More late-night conversations.
-More random pictures.
-More silly fights.
-More "I miss you."
-More hugs that last a little too long.
-More moments where we look at each other and forget what we were even talking about.
+So here's my little promise:
 
-And if someday we look back at this little website...
-
-I hope we smile and remember how much love was hiding inside these tiny pages.
-
-Shivam...
+No matter how many days pass,
+no matter how much life changes,
+I'll always keep a soft little corner of my heart reserved just for you.
 
 Thank you for being you.
 
-Thank you for existing in my life.
+Thank you for being my person.
 
-And thank you for giving my heart someone so beautiful to choose.
+And thank you for giving my heart
+someone to love this much.
 
-If I had to choose again...
+I love you, Shivam.
 
-among every person,
-every place,
-every possibility...
+More than this little website could ever explain.
 
-I would still choose you.
+Always yours. ❤️
+        `;
 
-Again.
+        const letter = document.getElementById("letter");
+        const finishBtn = document.getElementById("finishBtn");
 
-And again.
+        let index = 0;
 
-And again.
+        function typeLetter() {
 
-Always. ❤️`;
+            if (index < message.length) {
 
-let index = 0;
+                letter.innerHTML =
+                    message.substring(0, index + 1)
+                    .replace(/\n/g, "<br>") +
+                    '<span class="cursor">|</span>';
 
-const letter =
-document.getElementById("letter");
+                index++;
 
-function typeLetter() {
+                setTimeout(typeLetter, 25);
 
-    if(index < text.length) {
+            } else {
 
-        letter.innerHTML +=
-            text.charAt(index);
+                letter.innerHTML =
+                    message.replace(/\n/g, "<br>");
 
-        index++;
+                setTimeout(() => {
+                    finishBtn.style.display = "inline-block";
+                }, 1200);
+            }
+        }
 
-        setTimeout(typeLetter,28);
+        typeLetter();
 
-    } else {
-
-        document.getElementById("signature")
-            .style.display="block";
-
-        document.getElementById("finishBtn")
-            .style.display="block";
-    }
-}
-
-typeLetter();
-
-function showLove() {
-
-    window.location.href="lucky.html";
-
-}
-
-</script>
+    </script>
 
 </body>
 </html>
