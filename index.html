@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For My Shivam ❤️</title>
+    <title>For My Baby Shivam ❤️</title>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             min-height: 100vh;
             font-family: 'Poppins', sans-serif;
-
-            background:
-                radial-gradient(circle at 20% 20%, #ffd1e3 0%, transparent 35%),
-                radial-gradient(circle at 80% 80%, #ffe5ef 0%, transparent 35%),
-                linear-gradient(135deg, #fff0f6, #fff9fc);
-
+            background: linear-gradient(135deg, #ffd6e7, #fff7fb, #ffeaf2);
+            overflow-x: hidden;
+            overflow-y: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-
             padding: 25px 15px;
-
-            overflow-x: hidden;
-            overflow-y: auto;
+            position: relative;
         }
 
         .hearts {
@@ -46,87 +40,52 @@
             z-index: 0;
         }
 
-        .hearts span {
+        .heart {
             position: absolute;
-            bottom: -50px;
-            font-size: 22px;
-            animation: float 9s linear infinite;
+            bottom: -80px;
+            color: #ff5c8a;
+            font-size: 25px;
+            animation: floatHeart 9s linear infinite;
             opacity: 0;
         }
 
-        .hearts span:nth-child(1) {
-            left: 8%;
-            animation-delay: 0s;
-        }
+        .heart:nth-child(1) { left: 8%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 22%; animation-delay: 2s; }
+        .heart:nth-child(3) { left: 38%; animation-delay: 4s; }
+        .heart:nth-child(4) { left: 55%; animation-delay: 1s; }
+        .heart:nth-child(5) { left: 72%; animation-delay: 3s; }
+        .heart:nth-child(6) { left: 88%; animation-delay: 5s; }
 
-        .hearts span:nth-child(2) {
-            left: 23%;
-            animation-delay: 2s;
-        }
-
-        .hearts span:nth-child(3) {
-            left: 40%;
-            animation-delay: 4s;
-        }
-
-        .hearts span:nth-child(4) {
-            left: 58%;
-            animation-delay: 1s;
-        }
-
-        .hearts span:nth-child(5) {
-            left: 75%;
-            animation-delay: 3s;
-        }
-
-        .hearts span:nth-child(6) {
-            left: 90%;
-            animation-delay: 5s;
-        }
-
-        @keyframes float {
-
+        @keyframes floatHeart {
             0% {
                 transform: translateY(0) rotate(0deg);
                 opacity: 0;
             }
 
             20% {
-                opacity: .8;
+                opacity: 0.9;
             }
 
             100% {
-                transform: translateY(-110vh) rotate(25deg);
+                transform: translateY(-120vh) rotate(25deg);
                 opacity: 0;
             }
         }
 
         .container {
             width: 100%;
-            max-width: 650px;
-
-            background: rgba(255,255,255,.88);
-
-            backdrop-filter: blur(10px);
-
+            max-width: 680px;
+            background: rgba(255,255,255,0.94);
             padding: 50px 45px;
-
-            border-radius: 32px;
-
+            border-radius: 30px;
             text-align: center;
-
-            box-shadow:
-                0 20px 60px rgba(255, 77, 136, .18),
-                0 0 0 1px rgba(255,255,255,.8);
-
+            box-shadow: 0 20px 50px rgba(255,77,136,0.22);
             position: relative;
             z-index: 2;
-
             animation: appear 1s ease;
         }
 
         @keyframes appear {
-
             from {
                 opacity: 0;
                 transform: translateY(25px) scale(.97);
@@ -138,170 +97,165 @@
             }
         }
 
-        .small {
-            color: #ff6b9a;
-            font-size: 15px;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+        .small-heart {
+            font-size: 35px;
+            margin-bottom: 12px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+        h3 {
+            color: #ff4d88;
+            font-size: 28px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            color: #ff3f7f;
-            font-size: 34px;
-            margin-bottom: 8px;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 22px;
         }
 
-        .script {
-            font-family: 'Great Vibes', cursive;
-            color: #d9366d;
-            font-size: 48px;
-            margin-bottom: 20px;
+        .name {
+            font-family: 'Pacifico', cursive;
+            color: #ff4d88;
         }
 
-        .message {
+        p {
             color: #666;
-            font-size: 17px;
             line-height: 1.9;
+            font-size: 17px;
         }
 
-        .highlight {
+        .quote {
+            margin-top: 20px;
             color: #ff4d88;
             font-weight: 600;
+            font-size: 18px;
         }
 
-        .divider {
-            margin: 25px auto;
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #ff8fb3, transparent);
-        }
-
-        button {
-            margin-top: 30px;
-
-            padding: 15px 32px;
-
-            border: none;
+        .next-btn {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 15px 35px;
             border-radius: 50px;
-
-            background: linear-gradient(135deg, #ff4d88, #ff709f);
-
+            background: linear-gradient(135deg, #ff4d88, #ff729f);
             color: white;
-
+            text-decoration: none;
             font-size: 17px;
             font-weight: 600;
-
-            cursor: pointer;
-
-            box-shadow: 0 10px 25px rgba(255,77,136,.25);
-
-            transition: .3s;
+            box-shadow: 0 10px 25px rgba(255,77,136,0.28);
+            transition: .3s ease;
         }
 
-        button:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 14px 30px rgba(255,77,136,.35);
+        .next-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+            background: linear-gradient(135deg, #ff2f73, #ff5f91);
         }
 
-        @media(max-width:600px) {
+        .signature {
+            margin-top: 25px;
+            color: #aaa;
+            font-size: 14px;
+        }
 
+        @media (max-width: 600px) {
             body {
                 align-items: flex-start;
-                padding: 15px 10px;
+                padding: 18px 10px;
             }
 
             .container {
-                margin: 15px auto;
+                margin: 10px auto;
                 padding: 35px 20px;
-                border-radius: 25px;
+                border-radius: 24px;
+            }
+
+            h3 {
+                font-size: 24px;
             }
 
             h1 {
                 font-size: 27px;
             }
 
-            .script {
-                font-size: 40px;
+            p {
+                font-size: 15.5px;
+                line-height: 1.8;
             }
 
-            .message {
-                font-size: 15px;
-            }
-
-            button {
+            .next-btn {
                 width: 100%;
-                font-size: 16px;
+                padding: 15px 20px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-<div class="hearts">
-    <span>❤️</span>
-    <span>💕</span>
-    <span>💗</span>
-    <span>❤️</span>
-    <span>💖</span>
-    <span>💕</span>
-</div>
-
-<div class="container">
-
-    <div class="small">
-        A little something for someone very special...
+    <div class="hearts">
+        <span class="heart">❤️</span>
+        <span class="heart">💕</span>
+        <span class="heart">💗</span>
+        <span class="heart">❤️</span>
+        <span class="heart">💖</span>
+        <span class="heart">💕</span>
     </div>
 
-    <h1>
-        Hey, Shivam ❤️
-    </h1>
+    <div class="container">
 
-    <div class="script">
-        My Babyyy...
+        <div class="small-heart">❤️</div>
+
+        <h3>Hey My Baby <span class="name">Shivam</span> 🥹</h3>
+
+        <h1>I Made A Little World Just For You 💕</h1>
+
+        <p>
+            This isn't a birthday surprise...
+            <br><br>
+
+            It's not a special occasion either.
+
+            <br><br>
+
+            I just wanted to make something that could
+            hold a tiny piece of everything I feel for you. ❤️
+
+            <br><br>
+
+            Because sometimes "I love you" feels way too small
+            for everything my heart wants to say.
+        </p>
+
+        <div class="quote">
+            "If I could choose again, I'd still choose you." ❤️
+        </div>
+
+        <p style="margin-top:20px;">
+            So, my baby Shivam...
+            <br>
+            take my hand and come with me. 🫶
+        </p>
+
+        <a href="./love-meter.html" class="next-btn">
+            Start Our Little Love Story ❤️
+        </a>
+
+        <div class="signature">
+            Made with way too much love, just for you. 💌
+        </div>
+
     </div>
-
-    <div class="divider"></div>
-
-    <div class="message">
-
-        I made this little corner of the internet
-        just for <span class="highlight">you.</span>
-
-        <br><br>
-
-        Not because it's a special day...
-
-        <br>
-
-        but because <span class="highlight">
-        you are special to me every single day.</span>
-
-        <br><br>
-
-        So take my hand...
-
-        <br>
-
-        and let's go through a tiny
-        little journey of <b>us. ❤️</b>
-
-    </div>
-
-    <button onclick="nextPage()">
-        Start Our Little Story ❤️
-    </button>
-
-</div>
-
-<script>
-
-function nextPage() {
-    window.location.href = "love-meter.html";
-}
-
-</script>
 
 </body>
 </html>
