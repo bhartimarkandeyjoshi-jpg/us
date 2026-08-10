@@ -1,494 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>How Lucky Am I? ❤️</title>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-<style>
-
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body {
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:25px 15px;
-
-    overflow-x:hidden;
-    overflow-y:auto;
-
-    font-family:'Poppins',sans-serif;
-
-    background:
-    radial-gradient(circle at 20% 20%,#d9ffe4,transparent 35%),
-    radial-gradient(circle at 80% 80%,#ffd7e6,transparent 35%),
-    linear-gradient(135deg,#f1fff5,#fff4f8);
-}
-
-.container {
-
-    width:100%;
-    max-width:650px;
-
-    background:rgba(255,255,255,.94);
-
-    padding:45px;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    box-shadow:
-    0 20px 70px rgba(255,77,136,.18);
-}
-
-.script {
-
-    font-family:'Great Vibes',cursive;
-
-    color:#d9366d;
-
-    font-size:52px;
-
-    margin-bottom:5px;
-}
-
-h1 {
-
-    color:#ff4d88;
-
-    font-size:30px;
-
-    margin-bottom:12px;
-}
-
-.subtitle {
-
-    color:#777;
-
-    font-size:16px;
-
-    line-height:1.8;
-}
-
-#loading {
-
-    margin-top:25px;
-
-    color:#777;
-
-    min-height:25px;
-}
-
-.progress {
-
-    width:100%;
-
-    height:27px;
-
-    margin:20px 0 15px;
-
-    background:#e7f8eb;
-
-    border-radius:50px;
-
-    overflow:hidden;
-}
-
-.bar {
-
-    width:0%;
-
-    height:100%;
-
-    background:
-    linear-gradient(
-        90deg,
-        #67d47a,
-        #ff85ad
-    );
-
-    border-radius:50px;
-
-    transition:.1s;
-}
-
-#percent {
-
-    color:#ff4d88;
-
-    font-size:30px;
-
-    font-weight:700;
-}
-
-#result {
-
-    display:none;
-
-    margin-top:30px;
-
-    padding:28px 20px;
-
-    border-radius:24px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #f0fff3,
-        #fff1f6
-    );
-
-    color:#666;
-
-    font-size:16px;
-
-    line-height:1.9;
-
-    animation:appear .8s ease;
-}
-
-.luck {
-
-    font-family:'Great Vibes',cursive;
-
-    color:#ff4d88;
-
-    font-size:50px;
-
-    margin:8px 0;
-}
-
-#nextBtn {
-
-    display:none;
-
-    margin-top:25px;
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#ff4d88;
-
-    color:white;
-
-    font-size:17px;
-
-    cursor:pointer;
-}
-
-@keyframes appear {
-
-    from {
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@media(max-width:600px) {
-
-    body {
-        align-items:flex-start;
-        padding:15px 10px;
-    }
-
-    .container {
-        margin:15px auto;
-        padding:35px 18px;
-    }
-
-    .script {
-        font-size:43px;
-    }
-
-    h1 {
-        font-size:25px;
-    }
-
-    .subtitle {
-        font-size:15px;
-    }
-
-    #result {
-        font-size:15px;
-        padding:23px 15px;
-    }
-
-    .luck {
-        font-size:43px;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How Lucky Am I or tu bhii? 🍀❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg,#ffdce9,#fff7fb,#ffe8f1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 15px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(255,255,255,.96);
+            padding: 45px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(255,77,136,.23);
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h1 {
+            color: #ff4d88;
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .intro {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        #loading {
+            margin-top: 30px;
+            color: #ff4d88;
+            font-weight: 600;
+            min-height: 30px;
+        }
+
+        .progress {
+            width: 100%;
+            height: 25px;
+            background: #ffe8f0;
+            border-radius: 50px;
+            overflow: hidden;
+            margin: 25px 0 15px;
+        }
+
+        .bar {
+            height: 100%;
+            width: 0%;
+            border-radius: 50px;
+            background: linear-gradient(90deg,#ff4d88,#ff9db9);
+            transition: width .12s ease;
+        }
+
+        #percent {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff4d88;
+        }
+
+        #result {
+            display: none;
+            margin-top: 30px;
+            padding: 28px 22px;
+            background: linear-gradient(135deg,#fff0f5,#ffe4ee);
+            border-radius: 25px;
+            color: #555;
+            line-height: 1.9;
+            animation: resultAppear 1s ease;
+        }
+
+        @keyframes resultAppear {
+            from {
+                opacity: 0;
+                transform: scale(.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .infinity {
+            color: #ff4d88;
+            font-size: 38px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .final {
+            margin-top: 25px;
+            color: #ff4d88;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .signature {
+            margin-top: 25px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media(max-width:600px) {
+            body {
+                align-items: flex-start;
+                padding: 18px 10px;
+            }
+
+            .container {
+                margin: 10px auto;
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .intro {
+                font-size: 15px;
+            }
+
+            #result {
+                padding: 24px 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="script">
-        One Final Question...
-    </div>
+        <h1>🍀 How Lucky Am I? ❤️</h1>
 
-    <h1>
-        🍀 How Lucky Am I? ❤️
-    </h1>
+        <p class="intro">
+            Let's calculate my luck, Shivam...
+            <br>
+            Warning: the answer may be dangerously cute. 😌💕
+        </p>
 
-    <p class="subtitle">
+        <div id="loading">
+            Starting calculation...
+        </div>
 
-        Let's calculate just how lucky
-        I am to have you, Shivam...
+        <div class="progress">
+            <div class="bar" id="bar"></div>
+        </div>
 
-        <br>
+        <div id="percent">
+            0%
+        </div>
 
-        Although I think we already know
-        the answer. 😌
+        <div id="result">
 
-    </p>
+            🍀 <b>Result Found</b> 🍀
 
-    <div id="loading">
-        Starting calculation... 🍀
-    </div>
+            <br><br>
 
-    <div class="progress">
+            Luck Level:
 
-        <div
-            class="bar"
-            id="bar">
+            <div class="infinity">
+                ∞ / 10 ❤️
+            </div>
+
+            <p>
+                Calculation complete.
+
+                <br><br>
+
+                I checked everything.
+
+                <br>
+
+                I checked the stars. ✨
+
+                <br>
+
+                I checked the universe. 🌙
+
+                <br>
+
+                I even checked my heart.
+
+                <br><br>
+
+                And the answer is ridiculously simple:
+
+                <br><br>
+
+                <b style="color:#ff4d88;">
+                    My biggest luck is you.
+                </b>
+
+                <br><br>
+
+                Not winning something.
+
+                <br>
+
+                Not getting something.
+
+                <br>
+
+                Not having everything.
+
+                <br><br>
+
+                Just...
+
+                <br>
+
+                <b style="color:#ff4d88;">
+                    having YOU. ❤️
+                </b>
+            </p>
+
+            <div class="final">
+                Shivam, you're my favorite kind of lucky. 🥹❤️
+            </div>
+
+            <div style="margin-top:20px;font-size:30px;">
+                🫂 💋 ❤️ 💕 🥹
+            </div>
+
+            <div class="signature">
+                And if I had to choose again...
+                I'd choose you. Every time.
+            </div>
+
         </div>
 
     </div>
 
-    <div id="percent">
-        0%
-    </div>
+    <script>
 
-    <div id="result">
+        let progress = 0;
 
-        🍀 <b>RESULT FOUND</b> 🍀
+        const bar = document.getElementById("bar");
+        const percent = document.getElementById("percent");
+        const loading = document.getElementById("loading");
+        const result = document.getElementById("result");
 
-        <br><br>
+        const messages = [
+            "Starting calculation... ❤️",
+            "Checking heart rate... 🥹",
+            "Checking happiness level... 💕",
+            "Searching for luck... 🍀",
+            "Finding Shivam... ❤️",
+            "Almost there... 🫶",
+            "Final calculation... ✨"
+        ];
 
-        My Luck Level:
+        const timer = setInterval(() => {
 
-        <div class="luck">
-            ∞ / 10 ❤️
-        </div>
+            progress++;
 
-        <br>
+            bar.style.width = progress + "%";
+            percent.innerText = progress + "%";
 
-        Apparently...
+            if (progress % 15 === 0) {
+                const messageIndex =
+                    Math.min(
+                        Math.floor(progress / 15),
+                        messages.length - 1
+                    );
 
-        <br>
+                loading.innerText = messages[messageIndex];
+            }
 
-        having <b>Shivam</b> in my life
-        has broken the entire system. 😂❤️
+            if (progress >= 100) {
 
-        <br><br>
+                clearInterval(timer);
 
-        Because my biggest luck isn't
-        winning something...
+                loading.innerText =
+                    "Calculation complete... ❤️";
 
-        <br>
+                setTimeout(() => {
+                    result.style.display = "block";
+                }, 700);
+            }
 
-        It isn't money.
+        }, 35);
 
-        <br>
-
-        It isn't anything material.
-
-        <br><br>
-
-        <b style="color:#ff4d88;">
-            My biggest luck is YOU.
-        </b>
-
-        <br><br>
-
-        And if I could ask the universe
-        for just one thing...
-
-        <br><br>
-
-        I'd ask for
-
-        <b>
-            more time with you. ❤️
-        </b>
-
-        <br><br>
-
-        More memories.
-
-        <br>
-
-        More laughter.
-
-        <br>
-
-        More love.
-
-        <br><br>
-
-        <b style="color:#ff4d88;">
-            More us. 🥹❤️
-        </b>
-
-    </div>
-
-    <button
-        id="nextBtn"
-        onclick="finish()">
-
-        💗 Read This One Last Thing
-
-    </button>
-
-</div>
-
-<script>
-
-let value = 0;
-
-const bar =
-document.getElementById("bar");
-
-const percent =
-document.getElementById("percent");
-
-const loading =
-document.getElementById("loading");
-
-const result =
-document.getElementById("result");
-
-const nextBtn =
-document.getElementById("nextBtn");
-
-const timer =
-setInterval(function() {
-
-    value++;
-
-    bar.style.width =
-        value + "%";
-
-    percent.innerHTML =
-        value + "%";
-
-    if(value < 25) {
-
-        loading.innerHTML =
-            "Checking my luck... 🍀";
-
-    }
-
-    else if(value < 50) {
-
-        loading.innerHTML =
-            "Counting all the reasons I love you... ❤️";
-
-    }
-
-    else if(value < 75) {
-
-        loading.innerHTML =
-            "Searching for someone as special as Shivam... 🥹";
-
-    }
-
-    else if(value < 100) {
-
-        loading.innerHTML =
-            "Almost there, baby... 💕";
-
-    }
-
-    else {
-
-        clearInterval(timer);
-
-        loading.innerHTML =
-            "Calculation complete... ❤️";
-
-        setTimeout(function() {
-
-            result.style.display =
-                "block";
-
-            nextBtn.style.display =
-                "block";
-
-        },700);
-
-    }
-
-},35);
-
-
-function finish() {
-
-    result.innerHTML += `
-
-        <br><br>
-
-        <div style="
-            font-family:'Great Vibes',cursive;
-            color:#d9366d;
-            font-size:40px;
-        ">
-            I love you, Shivam. ❤️
-        </div>
-
-        <br>
-
-        <span style="color:#777;">
-            And this little website will never
-            be able to contain how much.
-        </span>
-
-        <br><br>
-
-        <span style="font-size:25px;">
-            🥹❤️🫂💋💕
-        </span>
-    `;
-
-    nextBtn.style.display = "none";
-
-}
-
-</script>
+    </script>
 
 </body>
 </html>
