@@ -1,362 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Our Time Together ❤️</title>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-<style>
-
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body {
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:20px 15px;
-
-    overflow-x:hidden;
-    overflow-y:auto;
-
-    font-family:'Poppins',sans-serif;
-
-    background:
-    radial-gradient(circle at 20% 80%,#ffd6e6,transparent 35%),
-    linear-gradient(135deg,#fff0f6,#fffafd);
-}
-
-.container {
-
-    width:100%;
-    max-width:700px;
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    box-shadow:
-    0 20px 60px rgba(255,77,136,.18);
-}
-
-.script {
-
-    font-family:'Great Vibes',cursive;
-
-    color:#d9366d;
-
-    font-size:45px;
-}
-
-h1 {
-
-    color:#ff4d88;
-
-    font-size:30px;
-
-    margin-bottom:12px;
-}
-
-.subtitle {
-
-    color:#777;
-
-    line-height:1.8;
-
-    font-size:16px;
-}
-
-.countdown {
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
-
-    margin:30px 0;
-}
-
-.box {
-
-    background:#fff0f6;
-
-    padding:20px 10px;
-
-    border-radius:20px;
-
-    box-shadow:0 5px 18px rgba(255,77,136,.1);
-}
-
-.number {
-
-    color:#ff4d88;
-
-    font-size:32px;
-
-    font-weight:700;
-}
-
-.label {
-
-    color:#777;
-
-    font-size:13px;
-}
-
-.message {
-
-    color:#666;
-
-    font-size:17px;
-
-    line-height:1.9;
-}
-
-button {
-
-    margin-top:30px;
-
-    padding:15px 35px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#ff4d88;
-
-    color:white;
-
-    font-size:17px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-button:hover {
-
-    transform:scale(1.05);
-
-    background:#ff2f73;
-}
-
-@media(max-width:600px) {
-
-    body {
-        align-items:flex-start;
-        padding:15px 10px;
-    }
-
-    .container {
-        margin:15px auto;
-        padding:32px 18px;
-    }
-
-    .script {
-        font-size:38px;
-    }
-
-    h1 {
-        font-size:24px;
-    }
-
-    .subtitle,
-    .message {
-        font-size:15px;
-    }
-
-    .countdown {
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .number {
-        font-size:27px;
-    }
-
-    button {
-        width:100%;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Time Together ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg,#ffe0eb,#fff7fb,#ffeaf2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 15px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            background: rgba(255,255,255,.96);
+            padding: 45px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(255,105,180,.22);
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff4d88;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .box {
+            background: #ffedf3;
+            width: 115px;
+            padding: 20px 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(255,77,136,.12);
+        }
+
+        .number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff4d88;
+        }
+
+        .label {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .message {
+            margin-top: 25px;
+            color: #555;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .heart-line {
+            color: #ff4d88;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        .next-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            border-radius: 50px;
+            background: linear-gradient(135deg,#ff4d88,#ff729f);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(255,77,136,.25);
+            transition: .3s;
+        }
+
+        .next-btn:hover {
+            transform: scale(1.04);
+        }
+
+        @media(max-width:600px) {
+            body {
+                align-items: flex-start;
+                padding: 18px 10px;
+            }
+
+            .container {
+                margin: 10px auto;
+                padding: 35px 18px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .subtitle,
+            .message {
+                font-size: 15px;
+            }
+
+            .box {
+                width: calc(50% - 8px);
+                min-width: 120px;
+            }
+
+            .number {
+                font-size: 28px;
+            }
+
+            .next-btn {
+                width: 100%;
+            }
+        }
+
+        @media(max-width:350px) {
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="script">
-        Look How Far We've Come...
-    </div>
+        <h1>❤️ Our Time Together ❤️</h1>
 
-    <h1>
-        ❤️ Our Time Together ❤️
-    </h1>
+        <p class="subtitle">
+            Look how much time has passed, Shivam...
+            <br>
+            and somehow I still want more of you. 🥹
+        </p>
 
-    <p class="subtitle">
+        <div class="countdown">
 
-        Shivam, every second with you
-        has quietly become a part of my heart.
+            <div class="box">
+                <div class="number" id="years">0</div>
+                <div class="label">Years</div>
+            </div>
 
-        <br><br>
+            <div class="box">
+                <div class="number" id="months">0</div>
+                <div class="label">Months</div>
+            </div>
 
-        Look at all this time we've already shared... 🥹
+            <div class="box">
+                <div class="number" id="days">0</div>
+                <div class="label">Days</div>
+            </div>
 
-    </p>
+            <div class="box">
+                <div class="number" id="hours">0</div>
+                <div class="label">Hours</div>
+            </div>
 
-    <div class="countdown">
+            <div class="box">
+                <div class="number" id="minutes">0</div>
+                <div class="label">Minutes</div>
+            </div>
 
-        <div class="box">
-            <div class="number" id="years">0</div>
-            <div class="label">Years</div>
+            <div class="box">
+                <div class="number" id="seconds">0</div>
+                <div class="label">Seconds</div>
+            </div>
+
         </div>
 
-        <div class="box">
-            <div class="number" id="months">0</div>
-            <div class="label">Months</div>
+        <div class="message">
+
+            From <b style="color:#ff4d88;">20 November 2024</b>
+            until this very moment...
+
+            <br><br>
+
+            Every second has become a tiny part
+            of our story.
+
+            <br><br>
+
+            And if you ask me what my favorite part is?
+
+            <br><br>
+
+            <b style="color:#ff4d88;">
+                It's simply the part where you're with me. ❤️
+            </b>
+
         </div>
 
-        <div class="box">
-            <div class="number" id="days">0</div>
-            <div class="label">Days</div>
+        <div class="heart-line">
+            🫶 ❤️ 🫶
         </div>
 
-        <div class="box">
-            <div class="number" id="hours">0</div>
-            <div class="label">Hours</div>
-        </div>
-
-        <div class="box">
-            <div class="number" id="minutes">0</div>
-            <div class="label">Minutes</div>
-        </div>
-
-        <div class="box">
-            <div class="number" id="seconds">0</div>
-            <div class="label">Seconds</div>
-        </div>
-
-    </div>
-
-    <div class="message">
-
-        And somehow...
-
-        <br><br>
-
-        I still want more.
-
-        <br><br>
-
-        More conversations.
-        More laughs.
-        More hugs.
-        More silly moments.
-
-        <br><br>
-
-        <b style="color:#ff4d88;">
-            More of you. ❤️
-        </b>
-
-        <br><br>
-
-        Because if I get to choose
-        who I spend my future with...
-
-        <br>
-
-        I already know my answer. 🥹
+        <a href="./letter.html" class="next-btn">
+            Open My Letter 💌
+        </a>
 
     </div>
 
-    <button onclick="nextPage()">
-        Open My Letter 💌
-    </button>
+    <script>
+        const startDate = new Date("2024-11-20T00:00:00");
 
-</div>
+        function updateTime() {
 
-<script>
+            const now = new Date();
 
-const startDate =
-new Date("2024-11-20T00:00:00");
+            let difference = now - startDate;
 
-function updateTime() {
+            if (difference < 0) {
+                difference = 0;
+            }
 
-    const now = new Date();
+            const totalSeconds = Math.floor(difference / 1000);
 
-    const difference =
-        now - startDate;
+            const seconds = totalSeconds % 60;
 
-    if(difference < 0) return;
+            const totalMinutes = Math.floor(totalSeconds / 60);
+            const minutes = totalMinutes % 60;
 
-    const seconds =
-        Math.floor(difference / 1000);
+            const totalHours = Math.floor(totalMinutes / 60);
+            const hours = totalHours % 24;
 
-    const minutes =
-        Math.floor(seconds / 60);
+            const totalDays = Math.floor(totalHours / 24);
 
-    const hours =
-        Math.floor(minutes / 60);
+            const years = Math.floor(totalDays / 365);
 
-    const days =
-        Math.floor(hours / 24);
+            const remainingAfterYears = totalDays % 365;
 
-    const years =
-        Math.floor(days / 365);
+            const months = Math.floor(remainingAfterYears / 30);
 
-    const months =
-        Math.floor((days % 365) / 30);
+            const days = remainingAfterYears % 30;
 
-    const remainingDays =
-        days % 30;
+            document.getElementById("years").innerText = years;
+            document.getElementById("months").innerText = months;
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
 
-    document.getElementById("years").innerHTML=years;
-
-    document.getElementById("months").innerHTML=months;
-
-    document.getElementById("days").innerHTML=remainingDays;
-
-    document.getElementById("hours").innerHTML=hours%24;
-
-    document.getElementById("minutes").innerHTML=minutes%60;
-
-    document.getElementById("seconds").innerHTML=seconds%60;
-}
-
-updateTime();
-
-setInterval(updateTime,1000);
-
-function nextPage() {
-
-    window.location.href="letter.html";
-
-}
-
-</script>
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 
 </body>
 </html>
